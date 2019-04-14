@@ -1,0 +1,115 @@
+<!-- <form #myForm="ngForm" [formGroup]="CreateEmploye" (ngSubmit)="onsubmit()">
+<ul class="createemp">
+  <h1>Fill the Employee Form</h1>
+  <b>Emp Name: </b>
+  <br>
+  <input type="string" formControlName="empName" required>
+  <br>
+  <b>EmpID: </b>
+  <br>
+  <input type="string" formControlName="empID" required>
+  <br>
+  <b>Emp Domain: </b>
+  <br>
+  <input type="string" formControlName="empDomain" required>
+  <br>
+  <b>Emp Salary: </b>
+  <br>
+  <input type="string" formControlName="empSalary" required>
+  <br>
+  <b>Emp MobileNumber: </b>
+  <br>
+  <input type="number" formControlName="empMobile" required>
+  <br>
+  <b>Emp Sex: </b>
+  <br>
+  <mat-radio-group formControlName="empType" required aria-label="Select an option">
+    <mat-radio-button value="Male">Male</mat-radio-button>
+    <mat-radio-button value="Female">Female</mat-radio-button>
+  </mat-radio-group>
+<input type="boolean" formControlName="empType" required> -->
+<!-- <br>
+  <button type="submit" [disabled]="!CreateEmploye.valid">Submit</button>
+  <button type="button" (click)="clear()">Clear</button>
+</ul>
+</form> -->
+
+<mat-card>
+  <h2 class="title">Add Employe</h2>
+  <form #myForm="ngForm" [formGroup]="CreateEmploye" (ngSubmit)="onsubmit()">
+    <div>
+      <mat-form-field>
+        <input
+          matInput
+          type="empName"
+          placeholder="Employee Name*"
+          formControlName="empName"
+        />
+        <mat-error>Please enter a valid empName</mat-error>
+      </mat-form-field>
+      <br />
+
+      <mat-form-field>
+        <input
+          matInput
+          type="empID"
+          placeholder="Emloyee ID*"
+          formControlName="empID"
+        />
+        <mat-error>Please enter a valid empID</mat-error>
+      </mat-form-field>
+      <br />
+      <mat-form-field>
+        <input
+          matInput
+          type="empDomain"
+          placeholder="Emloyee Domain*"
+          formControlName="empDomain"
+        />
+        <mat-error>Please enter a valid empDomain</mat-error>
+      </mat-form-field>
+      <br />
+      <mat-form-field>
+        <input
+          matInput
+          type="empSalary"
+          placeholder="Emloyee Salary*"
+          formControlName="empSalary"
+        />
+        <mat-error>Please enter a valid empSalary</mat-error>
+      </mat-form-field>
+      <br />
+      <mat-form-field>
+        <input
+          matInput
+          type="empMobile"
+          placeholder="Emloyee Mobile*"
+          formControlName="empMobile"
+        />
+        <mat-error>Please enter a valid empMobile</mat-error>
+      </mat-form-field>
+      <br />
+      <mat-radio-group
+        formControlName="empType"
+        required
+        aria-label="Select an option"
+      >
+        <mat-radio-button value="Male">Male</mat-radio-button>
+        <mat-radio-button value="Female">Female</mat-radio-button>
+      </mat-radio-group>
+      <br />
+      <button
+        mat-flat-button
+        color="primary"
+        type="submit"
+        [disabled]="!CreateEmploye.valid"
+      >
+        Submit
+      </button>
+      <button mat-flat-button color="warn" type="button" (click)="clear()">
+        Clear
+      </button>
+    </div>
+  </form>
+</mat-card>
+<br />
